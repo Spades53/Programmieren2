@@ -1,4 +1,6 @@
 package LE01;
 
-public class lifo {
+public class lifo
+{
+
 }
