@@ -14,7 +14,7 @@ public class Fifo
     {
         //Speicherobjekt mit mind. 3 und max 100 Elementen
         Random random = new Random();
-        this.arraySize = random.nextInt(97)+3;
+        this.arraySize = random.nextInt(98)+3;
         this.capacity = this.arraySize;
         elements = new Integer[this.arraySize];
     }

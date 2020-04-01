@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Lifo
 {
-    int size;
-    Integer[] elements;
-    int capacity;
+    private int capacity;
+    private Integer[] elements;
+    private int size;
     int objectCount = 0;
     int returnInt;
 
@@ -14,23 +14,23 @@ public class Lifo
     {
         //Speicherobjekt mit mind. 3 und max 100 Elementen
         Random random = new Random();
-        this.size = random.nextInt(97)+3;
-        this.capacity = this.size;
-        elements = new Integer[this.size];
+        this.capacity = random.nextInt(98)+3;
+        this.size = this.capacity;
+        elements = new Integer[this.capacity];
     }
     public Lifo(int s)
     {
         //Speicherobjekt mit s Anzahl an Elementen
-        this.size = s;
-        this.capacity = this.size;
-        elements = new Integer[this.size];
+        this.capacity = s;
+        this.size = this.capacity;
+        elements = new Integer[this.capacity];
     }
     public void push(Integer s)
     {
-        if(capacity>0)
+        if(size>0)
         {
-            elements[(this.size - capacity)] = s;
-            this.capacity--;
+            elements[(this.capacity - size)] = s;
+            this.size--;
             this.objectCount++;
         }
     }
@@ -41,7 +41,7 @@ public class Lifo
         returnInt = elements[objectCount-1];
         elements[objectCount-1] = null;
         this.objectCount--;
-        this.capacity++;
+        this.size++;
         return returnInt;
         }
         else
@@ -52,11 +52,11 @@ public class Lifo
     }
     public int size()
     {
-        return this.objectCount;
+        return this.size;
     }
     public int capacity()
     {
-        return this.capacity;
+        return this.size;
     }
 
 }
