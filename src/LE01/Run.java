@@ -14,5 +14,8 @@ public class Run
         System.out.println(bla.pop());
         System.out.println(bla.pop());
         System.out.println(bla.pop());
+        System.out.println(bla.pop());
+        bla.push(99);
+        System.out.println(bla.pop());
     }
 }
