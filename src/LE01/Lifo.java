@@ -19,10 +19,10 @@ public class Lifo extends AbstractIntegerBuffer
 
     public Integer pop()
     {
-        Integer returnIndex = array[size];
+        Integer returnInteger = array[size];
         array[size] = null;
         size--;
-        return returnIndex;
+        return returnInteger;
     }
 }
 

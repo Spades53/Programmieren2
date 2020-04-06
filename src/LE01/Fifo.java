@@ -19,7 +19,15 @@ public class Fifo extends AbstractIntegerBuffer
 
     public Integer pop()
     {
-        //TODO code pop() logic
-        return null;
+        Integer returnInteger = array[0];
+        Integer[] helpArray = array;
+
+        for (int i = 0; i < array.length; i++)
+        {
+            array[i] = helpArray[i+1];
+        }
+
+        size--;
+        return returnInteger;
     }
 }
