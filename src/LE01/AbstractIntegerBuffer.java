@@ -7,16 +7,18 @@ public abstract class AbstractIntegerBuffer implements IntegerBuffer
 
     public void push(Integer i)
     {
-        if(size>0)
+        if (array.length - size > 0)
         {
             array[(array.length - size)] = i;
-            this.size++;
+            size++;
         }
     }
+
     public int capacity()
     {
         return array.length;
     }
+
     public int size()
     {
         return size;
