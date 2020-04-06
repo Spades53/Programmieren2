@@ -56,7 +56,7 @@ public class Lifo implements IntegerBuffer
     }
     public int capacity()
     {
-        return this.size;
+        return elements.length;
     }
 
 }

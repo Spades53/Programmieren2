@@ -2,12 +2,12 @@ package LE01;
 
 import java.util.Random;
 
-public class Fifo implements IntegerBuffer
+public class Fifo extends AbstractIntegerBuffer
 {
     int arraySize;
     Integer[] elements;
     int capacity;
-    int objectCount = 0;
+    int size = 0;
     int returnInt;
 
     public Fifo()
@@ -31,15 +31,15 @@ public class Fifo implements IntegerBuffer
         {
             elements[(this.arraySize -capacity)] = s;
             this.capacity--;
-            this.objectCount++;
+            this.size++;
         }
     }
     public Integer pop()
     {
-        if (objectCount > 0)
+        if (size > 0)
         {
             this.capacity++;
-            this.objectCount--;
+            this.size--;
             returnInt = elements[0];
             for (int i = 1; i < this.arraySize; i++)
             {
@@ -52,14 +52,7 @@ public class Fifo implements IntegerBuffer
             return elements[0];
         }
         }
-    public int size()
-    {
-        return this.objectCount;
-    }
-    public int capacity()
-    {
-        return this.capacity;
-    }
+    
     public void test(int s)
     {
         System.out.println(elements[s]);

@@ -6,5 +6,4 @@ public interface IntegerBuffer
     public Integer pop();
     public int size();
     public int capacity();
-
 }
