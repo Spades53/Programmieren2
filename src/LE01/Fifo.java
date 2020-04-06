@@ -2,7 +2,7 @@ package LE01;
 
 import java.util.Random;
 
-public class Fifo
+public class Fifo implements IntegerBuffer
 {
     int arraySize;
     Integer[] elements;

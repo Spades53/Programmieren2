@@ -2,7 +2,7 @@ package LE01;
 
 import java.util.Random;
 
-public class Lifo
+public class Lifo implements IntegerBuffer
 {
     private int capacity;
     private Integer[] elements;
